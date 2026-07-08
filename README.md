@@ -520,3 +520,58 @@ du -sh /home
 The -h option displays information in a human-readable format, while -s provides a summary of directory size.
 
 Monitoring disk usage helps prevent storage shortages and improves system reliability.
+---
+
+# 7. Security
+
+## 7.1 Explain the concept of SSH. How do you set up an SSH server and client in Linux?
+
+SSH (Secure Shell) is a secure network protocol used to remotely access and manage Linux systems over an encrypted connection.
+
+### Install the SSH Server
+
+```bash
+sudo apt install openssh-server
+```
+
+
+### Start the SSH Service
+
+```bash
+sudo systemctl start ssh
+```
+
+
+### Enable SSH at Boot
+
+```bash
+sudo systemctl enable ssh
+```
+
+
+### Connect to a Remote Server
+
+```bash
+ssh username@192.168.1.100
+```
+
+
+SSH provides secure authentication and encrypted communication between systems.
+
+---
+
+## 7.2 What are SELinux and AppArmor?
+
+SELinux (Security-Enhanced Linux) and AppArmor are Linux security frameworks that provide mandatory access control (MAC).
+
+### SELinux
+
+- Used mainly in Red Hat Enterprise Linux and Fedora.
+- Applies security policies to restrict access.
+
+### AppArmor
+
+- Commonly used in Ubuntu and SUSE Linux.
+- Uses application profiles to control program permissions.
+
+Both technologies enhance Linux security by limiting what applications and users can access, reducing the impact of security breaches.
