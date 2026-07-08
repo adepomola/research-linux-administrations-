@@ -60,3 +60,101 @@ A Linux distribution (Linux distro) is a version of Linux that combines the Linu
 1. *Ubuntu* – Best for beginners, desktop users, and cloud computing.
 2. *Debian* – Known for stability and reliability.
 3. *Fedora* – Provides the latest Linux technologies and is widely used by developers.
+---
+
+# 2. User and File Management
+
+## 2.1 How do you create and manage users and groups in Linux?
+
+Linux uses users and groups to control access to system resources. The root user has full administrative privileges, while regular users have limited permissions.
+
+### Common Commands
+
+Create a new user:
+
+```bash
+sudo useradd username
+```
+
+
+Set a password:
+
+```bash
+sudo passwd username
+```
+
+
+Delete a user:
+
+```bash
+sudo userdel username
+```
+
+
+Create a group:
+
+```bash
+sudo groupadd developers
+```
+
+
+Add a user to a group:
+
+```bash
+sudo usermod -aG developers username
+```
+
+
+---
+
+## 2.2 What are file permissions in Linux?
+
+Linux controls access to files using three basic permissions:
+
+- *r* – Read
+- *w* – Write
+- *x* – Execute
+
+Example:
+
+```text
+-rwxr-xr--
+```
+
+
+Permission values:
+
+| Number | Permission |
+|--------|------------|
+| 7 | rwx |
+| 6 | rw- |
+| 5 | r-x |
+| 4 | r-- |
+
+Change permissions using:
+
+```bash
+chmod 755 filename
+```
+
+
+---
+
+## 2.3 How can you manage file ownership and groups?
+
+The chown command changes file ownership, while chgrp changes the group ownership.
+
+Change owner:
+
+```bash
+sudo chown username filename
+```
+
+Change group:
+
+```bash
+sudo chgrp developers filename
+```
+
+
+These commands help administrators control access to files and directories securely.
