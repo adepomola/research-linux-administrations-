@@ -158,3 +158,120 @@ sudo chgrp developers filename
 
 
 These commands help administrators control access to files and directories securely.
+---
+
+# 3. System Administration
+
+## 3.1 What are system services and daemons in Linux?
+
+System services, also known as *daemons*, are background processes that perform essential tasks without direct user interaction. They start automatically during system boot or when required.
+
+Examples include:
+
+- SSH (sshd)
+- Apache Web Server (httpd or apache2)
+- MySQL (mysqld)
+- Network Manager
+
+### Managing Services with systemctl
+
+Start a service:
+
+```bash
+sudo systemctl start nginx
+```
+
+
+Stop a service:
+
+```bash
+sudo systemctl stop nginx
+```
+
+
+Restart a service:
+
+```bash
+sudo systemctl restart nginx
+```
+
+
+Check service status:
+
+```bash
+sudo systemctl status nginx
+```
+
+
+Enable a service at boot:
+
+```bash
+sudo systemctl enable nginx
+```
+
+
+Disable a service:
+
+```bash
+sudo systemctl disable nginx
+```
+
+
+---
+
+## 3.2 Explain how to schedule tasks in Linux using cron and at.
+
+Linux provides two common tools for scheduling tasks.
+
+### Cron
+
+cron is used to schedule recurring tasks.
+
+Edit the cron table:
+
+```bash
+crontab -e
+```
+
+
+Example:
+
+```bash
+0 2 * * * /home/user/backup.sh
+```
+
+
+This command runs the backup script every day at *2:00 AM*.
+
+### at
+
+The at command schedules a task to run once at a specified time.
+
+Example:
+
+```bash
+at 5:00 PM
+```
+
+
+---
+
+## 3.3 What is the purpose of the /etc/fstab file?
+
+The /etc/fstab file contains information about file systems that should be mounted automatically when Linux starts.
+
+### Mount a File System
+
+```bash
+sudo mount /dev/sdb1 /mnt/data
+```
+
+
+### Unmount a File System
+
+```bash
+sudo umount /mnt/data
+```
+
+
+Proper management of /etc/fstab ensures that storage devices are mounted automatically and consistently during system startup.
