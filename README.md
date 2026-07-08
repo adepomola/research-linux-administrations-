@@ -367,3 +367,106 @@ sudo ufw status
 
 
 Proper firewall configuration is essential for protecting Linux systems against network threats.
+---
+
+# 5. Package Management
+
+## 5.1 What are package managers in Linux? Compare apt, yum, and dnf.
+
+A package manager is a software tool used to install, update, upgrade, and remove software packages from a Linux system. It also manages software dependencies automatically.
+
+### Comparison of Common Linux Package Managers
+
+| Package Manager | Distribution | Features |
+|----------------|-------------|----------|
+| apt | Ubuntu and Debian | Fast, reliable, and easy to use |
+| yum | Older CentOS and RHEL | Manages RPM packages and dependencies |
+| dnf | Fedora, RHEL 8+, CentOS Stream | Improved performance and dependency management |
+
+Package managers simplify software installation and keep systems up to date.
+
+---
+
+## 5.2 How do you install, update, and remove packages using a package manager?
+
+### Using APT (Ubuntu/Debian)
+
+Update package list:
+
+```bash
+sudo apt update
+```
+
+
+Upgrade installed packages:
+
+```bash
+sudo apt upgrade
+```
+
+
+Install a package:
+
+```bash
+sudo apt install nginx
+```
+
+
+Remove a package:
+
+```bash
+sudo apt remove nginx
+```
+
+
+---
+
+### Using DNF (Fedora)
+
+Install:
+
+```bash
+sudo dnf install nginx
+```
+
+
+Update:
+
+```bash
+sudo dnf update
+```
+
+
+Remove:
+
+```bash
+sudo dnf remove nginx
+```
+
+
+---
+
+### Using YUM (Older CentOS)
+
+Install:
+
+```bash
+sudo yum install nginx
+```
+
+
+Update:
+
+```bash
+sudo yum update
+```
+
+
+Remove:
+
+```bash
+sudo yum remove nginx
+```
+
+
+Package managers improve system administration by automating software installation, updates, and dependency management.
