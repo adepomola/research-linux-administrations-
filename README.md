@@ -575,3 +575,76 @@ SELinux (Security-Enhanced Linux) and AppArmor are Linux security frameworks tha
 - Uses application profiles to control program permissions.
 
 Both technologies enhance Linux security by limiting what applications and users can access, reducing the impact of security breaches.
+---
+
+# 8. Backup and Recovery
+
+## 8.1 How do you perform backups in Linux?
+
+Backups are essential for protecting important data against accidental deletion, hardware failure, or cyberattacks. Linux provides several built-in tools for creating backups.
+
+### Using `rsync`
+
+The rsync command copies files efficiently while preserving file permissions.
+
+```bash
+rsync -av /home/user/Documents/ /backup/Documents/
+```
+
+
+### Using `tar`
+
+The tar command archives multiple files into a single compressed file.
+
+```bash
+tar -czvf backup.tar.gz /home/user/Documents
+```
+
+
+### Using `dd`
+
+The dd command creates an exact copy of a disk or partition.
+
+```bash
+sudo dd if=/dev/sda of=/backup/disk-image.img
+```
+
+
+Each backup tool serves different purposes depending on the administrator's requirements.
+
+---
+
+## 8.2 What are some strategies for system recovery in case of a failure?
+
+System recovery ensures that a Linux system can be restored after hardware failure, software corruption, or cyberattacks.
+
+Common recovery strategies include:
+
+- Performing regular system backups.
+- Testing backup files periodically.
+- Creating bootable recovery media.
+- Using RAID for disk redundancy.
+- Storing backups in secure off-site or cloud locations.
+- Documenting system configurations for easier restoration.
+
+Implementing these strategies helps reduce downtime and ensures business continuity.
+
+---
+
+# Conclusion
+
+Linux Administration is a fundamental skill for managing servers, cloud infrastructure, and enterprise systems. Understanding Linux file systems, user management, networking, package management, security, monitoring, and backup techniques enables administrators to maintain reliable, secure, and efficient computing environments.
+
+As Linux continues to dominate cloud computing, DevOps, and cybersecurity, developing Linux administration skills remains essential for modern IT professionals.
+
+---
+
+# References
+
+- Nemeth, E., Hein, T., Snyder, G., & Whaley, B. (2017). UNIX and Linux System Administration Handbook (5th ed.). Pearson.
+
+- Shotts, W. (2019). The Linux Command Line (2nd ed.). No Starch Press.
+
+- Linux Foundation. (n.d.). Linux Documentation. https://www.linuxfoundation.org
+
+- Ubuntu Documentation. (n.d.). Ubuntu Server Guide. https://ubuntu.com/server/docs
