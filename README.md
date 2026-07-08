@@ -470,3 +470,53 @@ sudo yum remove nginx
 
 
 Package managers improve system administration by automating software installation, updates, and dependency management.
+---
+
+# 6. Monitoring and Performance
+
+## 6.1 What tools are available in Linux for monitoring system performance?
+
+Linux provides several tools for monitoring system performance and identifying resource bottlenecks.
+
+| Tool | Purpose |
+|------|---------|
+| top | Displays real-time CPU, memory, and process usage. |
+| htop | An interactive version of top with an improved interface. |
+| vmstat | Reports memory, CPU, and input/output statistics. |
+| iostat | Monitors CPU utilization and disk input/output performance. |
+
+### Example Commands
+
+```bash
+top
+htop
+vmstat
+iostat
+```
+
+
+These tools help administrators monitor system health and troubleshoot performance issues.
+
+---
+
+## 6.2 How do you check disk usage and availability using commands like df and du?
+
+The df and du commands are commonly used to monitor disk usage.
+
+### Check Available Disk Space
+
+```bash
+df -h
+```
+
+
+### Check Directory Size
+
+```bash
+du -sh /home
+```
+
+
+The -h option displays information in a human-readable format, while -s provides a summary of directory size.
+
+Monitoring disk usage helps prevent storage shortages and improves system reliability.
