@@ -275,3 +275,95 @@ sudo umount /mnt/data
 
 
 Proper management of /etc/fstab ensures that storage devices are mounted automatically and consistently during system startup.
+---
+
+# 4. Networking
+
+## 4.1 Describe the basic networking commands in Linux.
+
+Linux provides several networking commands that help administrators troubleshoot and manage network connections.
+
+| Command | Purpose |
+|---------|---------|
+| ip | Displays and configures network interfaces and IP addresses. |
+| ifconfig | Displays network interface information (legacy command). |
+| ping | Tests connectivity between two devices on a network. |
+| netstat | Displays network connections, routing tables, and interface statistics (legacy). |
+| ss | Displays active socket connections and is the modern replacement for netstat. |
+
+### Example Commands
+
+```bash
+ip addr
+ping google.com
+ss -tuln
+```
+
+
+These commands help administrators diagnose and troubleshoot network issues.
+
+---
+
+## 4.2 How do you configure a static IP address in Linux?
+
+A static IP address remains constant, making it suitable for servers and network devices.
+
+### Example Configuration (Ubuntu Netplan)
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses:
+        - 192.168.1.20/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+```
+
+
+After editing the configuration file, apply the changes using:
+
+```bash
+sudo netplan apply
+```
+
+
+---
+
+## 4.3 What are firewalls in Linux?
+
+A firewall controls incoming and outgoing network traffic based on predefined security rules. It helps protect Linux systems from unauthorized access.
+
+Common firewall tools include:
+
+- UFW (Uncomplicated Firewall)
+- iptables
+- firewalld
+
+### Allow SSH using UFW
+
+```bash
+sudo ufw allow ssh
+```
+
+
+### Enable UFW
+
+```bash
+sudo ufw enable
+```
+
+
+### Check Firewall Status
+
+```bash
+sudo ufw status
+```
+
+
+Proper firewall configuration is essential for protecting Linux systems against network threats.
